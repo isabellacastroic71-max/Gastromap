@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Gastro Map",
+    "slug": "gastro-map",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#006491"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gastromap.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#006491"
+      },
+      "package": "com.gastromap.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Gastro Map necesita acceso a la cámara para fotografiar tus platos."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Gastro Map necesita acceso a tu galería para seleccionar fotos de platos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Gastro Map usa tu ubicación para registrar dónde disfrutaste cada plato."
+        }
+      ]
+    ],
+    "scheme": "gastromap",
+    "extra": {
+      "eas": {
+        "projectId": "gastro-map-project"
+      }
+    }
+  }
+}
